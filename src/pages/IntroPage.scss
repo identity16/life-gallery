@@ -1,0 +1,31 @@
+.IntroPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100%;
+    overflow: auto;
+    padding: 0 32px;
+
+    h1 {
+        text-align: center;
+        margin: 0 0 36px;
+    }
+
+    .featured-image {
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .featured-image-list {
+        display: flex;
+        margin-left: -8px; /* gutter size offset */
+        width: auto;
+
+        &_column {
+            padding-left: 8px;
+            background-clip: padding-box;
+        }
+    }
+}

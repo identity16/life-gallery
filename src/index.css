@@ -1,6 +1,12 @@
 body {
     margin: 0;
+    height: 100vh;
+    overflow: hidden;
     font-family: "Nanum Myeongjo", serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+    height: 100%;
 }
