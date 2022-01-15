@@ -5,7 +5,9 @@ import "swiper/css/navigation";
 import "./App.scss";
 import { useEffect, useState } from "react";
 import { getAuthor } from "./api/author";
+import { getContents } from "./api/content";
 import IntroPage from "./pages/IntroPage";
+import ContentPage from "./pages/ContentPage";
 
 function App() {
     const [author, setAuthor] = useState({
@@ -14,9 +16,15 @@ function App() {
         featuredImages: [],
     });
 
+    const [contents, setContents] = useState([]);
+
     useEffect(() => {
         setAuthor(getAuthor(1));
     }, []);
+
+    useEffect(() => {
+        setContents(getContents(author));
+    }, [author]);
 
     return (
         <div className="App">
@@ -24,7 +32,11 @@ function App() {
                 <SwiperSlide>
                     <IntroPage author={author} />
                 </SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
+                {contents.map((content) => (
+                    <SwiperSlide key={content.id}>
+                        <ContentPage content={content} />
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     );

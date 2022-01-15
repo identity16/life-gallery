@@ -1,0 +1,35 @@
+.ContentPage {
+    box-sizing: border-box;
+    min-height: 100%;
+    overflow: auto;
+    padding: 36px 32px;
+    align-self: flex-start;
+
+    header {
+        text-align: center;
+
+        h5 {
+            font-size: 16px;
+            font-weight: normal;
+            margin: 0 0 8px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+    }
+    img {
+        display: block;
+        margin: 32px 0 24px;
+        max-width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0 8px;
+    }
+}
