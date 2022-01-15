@@ -8,7 +8,7 @@ function IntroPage({ author }) {
             {author.featuredImages.length > 0 && (
                 <>
                     <img
-                        className="featured-image"
+                        className="featured-image featured-image-main"
                         src={author.featuredImages[0].src}
                         alt={author.featuredImages[0].description}
                     />

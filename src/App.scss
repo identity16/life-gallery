@@ -1,8 +1,17 @@
 .App {
     height: 100%;
     overflow: hidden;
+
     .swiper {
         height: 100%;
+    }
+
+    .swiper-slide {
+        max-height: 100%;
+        max-height: -webkit-fill-available;
+        overflow: auto;
+        display: flex;
+        align-items: center;
     }
 
     .swiper-button-prev {
