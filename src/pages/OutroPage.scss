@@ -1,0 +1,41 @@
+.OutroPage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 32px;
+
+    h1 {
+        text-align: center;
+        margin: 0;
+        font-weight: normal;
+    }
+
+    .share-container {
+        position: absolute;
+        bottom: 12%;
+        width: 60%;
+
+        text-align: center;
+
+        h2 {
+            font-weight: normal;
+        }
+
+        .share-btn-container {
+            display: flex;
+            justify-content: space-between;
+
+            .btn-share {
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                background-color: #dedede;
+            }
+        }
+    }
+}

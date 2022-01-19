@@ -8,6 +8,7 @@ import { getAuthor } from "./api/author";
 import { getContents } from "./api/content";
 import IntroPage from "./pages/IntroPage";
 import ContentPage from "./pages/ContentPage";
+import OutroPage from "./pages/OutroPage";
 
 function App() {
     const [author, setAuthor] = useState({
@@ -37,6 +38,9 @@ function App() {
                         <ContentPage content={content} />
                     </SwiperSlide>
                 ))}
+                <SwiperSlide>
+                    <OutroPage author={author} />
+                </SwiperSlide>
             </Swiper>
         </div>
     );
