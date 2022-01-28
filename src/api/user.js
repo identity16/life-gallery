@@ -3,8 +3,8 @@ import { User } from "../model/user";
 export const getUser = (id) => {
     const response = {
         id,
-        full_name: "홍길동",
-        nick_name: "",
+        full_name: "",
+        nick_name: "홍길동",
         kakao_id: "x_12345",
         featuredImages: [
             {

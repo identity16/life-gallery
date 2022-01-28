@@ -5,7 +5,7 @@ function OutroPage({ author }) {
         author && (
             <section className="OutroPage">
                 <h1>
-                    {author.fullName} 작가님의 작품을
+                    {author.nickName} 작가님의 작품을
                     <br />
                     끝까지 봐주셔서
                     <br />

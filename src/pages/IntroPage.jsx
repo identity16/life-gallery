@@ -4,7 +4,7 @@ import "./IntroPage.scss";
 function IntroPage({ author }) {
     return author !== null ? (
         <section className="IntroPage">
-            <h1>{author.fullName} 작가님</h1>
+            <h1>{author.nickName} 작가님</h1>
             {author.featuredImages.length > 0 && (
                 <>
                     <img
