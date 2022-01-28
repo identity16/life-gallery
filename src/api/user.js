@@ -1,11 +1,20 @@
+import axios from "axios";
 import { User } from "../model/user";
 
-export const getUser = (id) => {
-    const response = {
-        id,
-        full_name: "",
-        nick_name: "홍길동",
-        kakao_id: "x_12345",
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+
+export const getUser = async (id) => {
+    const { data: user } = await axios.get(`/users/${id}`);
+
+    if (!user) return null;
+
+    return new User({
+        id: user.id,
+        fullName: user.full_name,
+        nickName: user.nick_name,
+        kakaoId: user.kakao_id,
+        createdAt: user.created_at,
+        updatedAt: user.updated_at,
         featuredImages: [
             {
                 src: "https://randomwordgenerator.com/img/picture-generator/53e3d6414255a414f1dc8460962e33791c3ad6e04e507440762e7ad39544c1_640.jpg",
@@ -20,17 +29,5 @@ export const getUser = (id) => {
                 description: "Image",
             },
         ],
-        created_at: new Date(),
-        updated_at: new Date(),
-    };
-
-    return new User({
-        id: response.id,
-        fullName: response.full_name,
-        nickName: response.nick_name,
-        kakaoId: response.kakao_id,
-        createdAt: response.created_at,
-        updatedAt: response.updated_at,
-        featuredImages: response.featuredImages,
     });
 };

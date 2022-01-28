@@ -36,18 +36,17 @@ function GalleryPage() {
 
                 targetSlide = pid + 1;
             }
-            console.log(targetSlide);
 
             controller.slideTo(targetSlide, 0);
         }
     }, [controller, posts, postId]);
 
     useEffect(() => {
-        setUser(getUser(userId));
+        getUser(userId).then(setUser);
     }, [userId]);
 
     useEffect(() => {
-        setPosts(getPosts(user));
+        getPosts(user).then(setPosts);
     }, [user]);
 
     return (

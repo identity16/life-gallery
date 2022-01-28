@@ -2,7 +2,7 @@ import Masonry from "react-masonry-css";
 import "./IntroPage.scss";
 
 function IntroPage({ author }) {
-    return author !== null ? (
+    return author ? (
         <section className="IntroPage">
             <h1>{author.nickName} 작가님</h1>
             {author.featuredImages.length > 0 && (
