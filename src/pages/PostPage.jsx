@@ -1,15 +1,15 @@
-import "./ContentPage.scss";
+import "./PostPage.scss";
 
-function ContentPage({ content }) {
+function PostPage({ post }) {
     return (
-        <section className="ContentPage">
+        <section className="PostPage">
             <header>
-                <h5>{content.author.name} 작가님</h5>
-                <h1>{content.title}</h1>
+                <h5>{post.author.fullName} 작가님</h5>
+                <h1>{post.title}</h1>
             </header>
-            <img src={content.imgSrc} alt={content.title} />
+            <img src={post.imageLink} alt={post.title} />
             <p>
-                {content.description
+                {post.content
                     .trim()
                     .split(/\n/g)
                     .map((line) => {
@@ -25,4 +25,4 @@ function ContentPage({ content }) {
     );
 }
 
-export default ContentPage;
+export default PostPage;

@@ -2,9 +2,9 @@ import Masonry from "react-masonry-css";
 import "./IntroPage.scss";
 
 function IntroPage({ author }) {
-    return (
+    return author !== null ? (
         <section className="IntroPage">
-            <h1>{author.name} 작가님</h1>
+            <h1>{author.fullName} 작가님</h1>
             {author.featuredImages.length > 0 && (
                 <>
                     <img
@@ -29,6 +29,8 @@ function IntroPage({ author }) {
                 </>
             )}
         </section>
+    ) : (
+        <p>Loading..</p>
     );
 }
 

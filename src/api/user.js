@@ -1,7 +1,11 @@
-export const getAuthor = (id) => {
-    return {
+import { User } from "../model/user";
+
+export const getUser = (id) => {
+    const response = {
         id,
-        name: "김봉팔",
+        full_name: "홍길동",
+        nick_name: "",
+        kakao_id: "x_12345",
         featuredImages: [
             {
                 src: "https://randomwordgenerator.com/img/picture-generator/53e3d6414255a414f1dc8460962e33791c3ad6e04e507440762e7ad39544c1_640.jpg",
@@ -16,5 +20,17 @@ export const getAuthor = (id) => {
                 description: "Image",
             },
         ],
+        created_at: new Date(),
+        updated_at: new Date(),
     };
+
+    return new User({
+        id: response.id,
+        fullName: response.full_name,
+        nickName: response.nick_name,
+        kakaoId: response.kakao_id,
+        createdAt: response.created_at,
+        updatedAt: response.updated_at,
+        featuredImages: response.featuredImages,
+    });
 };
