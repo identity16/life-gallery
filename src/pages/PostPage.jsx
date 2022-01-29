@@ -1,10 +1,10 @@
 import "./PostPage.scss";
 
-function PostPage({ post }) {
+function PostPage({ post, author }) {
     return (
         <section className="PostPage">
             <header>
-                <h5>{post.author.nickName} 작가님</h5>
+                <h5>{author.nickName} 작가님</h5>
                 <h1>{post.title}</h1>
             </header>
             <img src={post.imageLink} alt={post.title} />

@@ -64,7 +64,7 @@ function GalleryPage() {
             </SwiperSlide>
             {posts.map((post) => (
                 <SwiperSlide key={post.id} data-history={post.id}>
-                    <PostPage post={post} />
+                    <PostPage post={post} author={user} />
                 </SwiperSlide>
             ))}
             <SwiperSlide data-history="outro">
