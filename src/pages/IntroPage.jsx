@@ -17,12 +17,12 @@ function IntroPage({ author }) {
                         className="featured-image-list"
                         columnClassName="featured-image-list_column"
                     >
-                        {author.featuredImages.slice(1).map((fImage) => (
+                        {author.featuredImages.map((fImage, idx) => (
                             <img
                                 className="featured-image"
-                                key={fImage.src}
-                                src={fImage.src}
-                                alt={fImage.description}
+                                key={author.nickName + idx}
+                                src={fImage}
+                                alt={author.nickName + idx}
                             />
                         ))}
                     </Masonry>
